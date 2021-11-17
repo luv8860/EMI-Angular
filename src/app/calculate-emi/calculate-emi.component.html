@@ -1,0 +1,13 @@
+<div class="center">
+    <h1>Calculate EMI</h1>
+    <form #emiform="ngForm" (ngSubmit)="httpGet(emiform)">
+        <div class="txt_field">
+            <input type="text" name = "pid" required ngModel>
+            <span></span>
+            <label>Product ID</label>
+        </div>
+        <input type="submit" value="Submit Form" >
+        <div class="signup_link">
+        </div>
+    </form>
+</div>

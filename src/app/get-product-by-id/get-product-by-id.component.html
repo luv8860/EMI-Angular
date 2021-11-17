@@ -1,0 +1,48 @@
+<div>
+    <div class="center">
+        <h1>Get Product By ID</h1>
+        <form #productform="ngForm" (ngSubmit)="httpGet(productform)">
+            <div class="txt_field">
+                <input type="text" name = "pid" required ngModel>
+                <span></span>
+                <label>Product ID</label>
+            </div>
+            <input type="submit" value="Submit Form" >
+            <div class="signup_link">
+            </div>
+        </form>
+    </div>
+    <div>
+        <table class="table table-hover" style="position:relative;top:100%;height: 20%;">
+            <thead>
+              <tr *ngIf="a.length!=0">
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Tenure</th>
+                <th scope="col">Active</th>
+                <th scope="col">Rate of Interest</th>
+                <th scope="col">Principle Amount</th>
+                <th scope="col">Created By</th>
+                <th scope="col">Created On</th>
+                <th scope="col">Updated By</th>
+                <th scope="col">Updated On</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of a;" >
+                <td>{{product.productID}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.tenure}}</td>
+                <td>{{product.active}}</td>
+                <td>{{product.rateOfInterest}}</td>
+                <td>{{product.princlpleAmount}}</td>
+                <td>{{product.createdBy}}</td>
+                <td>{{product.createdOn}}</td>
+                <td>{{product.updatedBy}}</td>
+                <td>{{product.updatedOn}}</td>
+              </tr>
+            </tbody>
+          </table>
+    
+    </div>
+</div>

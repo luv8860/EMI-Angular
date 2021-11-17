@@ -1,0 +1,48 @@
+<div class="center">
+    <h1>Update Products</h1>
+    <form #emiform="ngForm" (ngSubmit)="httpPut(emiform)">
+        <div class="txt_field">
+            <input type="text" name="pid" required ngModel>
+            <span></span>
+            <label>Product ID</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="pname" required ngModel>
+            <span></span>
+            <label>Product Name</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="pamt" required ngModel>
+            <span></span>
+            <label>Principle Amount</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="pupdated" required ngModel>
+            <span></span>
+            <label>Updated By</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="proi" required ngModel>
+            <span></span>
+            <label>Rate of Interest</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="ptenure" required ngModel>
+            <span></span>
+            <label>Tenure</label>
+        </div>
+        <div style="color: #adadad;">
+            <span></span>
+            <label>&ensp;Is active&ensp;</label>
+            <input type="radio" id="true" name="active" value="true" ngModel>
+            <label for="true">True&ensp;</label>
+            <input type="radio" id="false" name="active" value="false" ngModel>
+            <label for="false">False</label>
+            <pre>
+            </pre>
+        </div>
+        <input type="submit" value="Submit Form">
+        <div class="signup_link">
+        </div>
+    </form>
+</div>
